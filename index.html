@@ -3,73 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafío GRID</title>
+    <title>Desafío Animación</title>
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/69f81ea0a3.js" crossorigin="anonymous"></script>
     <!--CSS-->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
     <div class="grid-container">
-        <header>
-            <h3>Mi Página Final</h3>
-        </header>
-    
-        <main>
-            <section class="aside-bar grid-item">
-                <div class="menu">
-                    <h2>Categorías</h2>
-                    <ul>
-                        <div class="items">
-                            <li><a href="#perfumes_section">Perfumes</a></li>
-                            <p>(13)</p>
-                        </div>
-                        <div class="items">
-                            <li><a href="#perfumes_section">Ropa</a></li>
-                            <p>(21)</p>
-                        </div>
-                        <div class="items">
-                            <li><a href="#perfumes_section">Accesorios</a></li>
-                            <p>(41)</p>
-                        </div>
-                        <div class="items">
-                            <li><a href="#perfumes_section">Zapatos</a></li>
-                            <p>(10)</p>
-                        </div>
-                    </ul>    
-                </div>
-                <div class="logo">
-                    <br><br><br><br>
-                    <img src="./assets/img/acme_logo.jpg" alt="Logo de la empresa">
-                </div>
-            </section>
-            <section class="imagenes">
-                <section class="grilla grid-item" id="perfumes_section">
+    <!--<header>
+            <h3>Mi Desafío de Animación Final</h3>
+        </header>-->
+        <nav class="nav_section">
+            <div class="mini_head">
+                <i class="fa-solid fa-industry"></i><!--<i class="fa-solid fa-industry fa-2xl"></i>-->
+                <h1>CategoríasCategorías</h1>    
+            </div>
+            <div class="menu">
+                    <div class="items">
+                        <li><a href="#perfumes_section">Perfumes</a></li>
+                        <p>(13)</p>
+                    </div>
+                    <div class="items">
+                        <li><a href="#perfumes_section">Ropa</a></li>
+                        <p>(21)</p>
+                    </div>
+                    <div class="items">
+                        <li><a href="#perfumes_section">Accesorios</a></li>
+                        <p>(41)</p>
+                    </div>
+                    <div class="items">
+                        <li><a href="#perfumes_section">Zapatos</a></li>
+                        <p>(10)</p>
+                    </div>
+            </div>
+        </nav> 
+        <main class="main_section">
+                <section class="perfume_grilla grid-item" id="perfumes_section">
                     <div class="card grid-item">
                         <div class="una_imagen">
-                            <img src="./assets/img/perfumes_img.jpg" alt="">
-                            <h2>PERFUMES</h2>
-                            <p>44.700</p>    
+                            <img src="./assets/img/perfumes_img.jpg" alt="Imagen de perfumes">
                         </div>
-                        <div class="mini_footer">Comprar</div>
+                        <span> PERFUMES <br> 44.700</span>
+                        <button>Comprar</button>
                     </div>
                     <div class="card grid-item">
                         <div class="una_imagen">
-                            <img src="./assets/img/perfumes_img.jpg" alt="">
-                            <h2>PERFUMES</h2>
-                            <p>44.700</p>    
+                            <img src="./assets/img/perfumes_img.jpg" alt="Imagen de perfumes">
                         </div>
-                        <div class="mini_footer">Comprar</div>
+                        <span> PERFUMES <br> 44.700</span>
+                        <button>Comprar</button>
                     </div>
                     <div class="card grid-item">
                         <div class="una_imagen">
-                            <img src="./assets/img/perfumes_img.jpg" alt="">
-                            <h2>PERFUMES</h2>
-                            <p>44.700</p>    
+                            <img src="./assets/img/perfumes_img.jpg" alt="Imagen de perfumes">
                         </div>
-                        <div class="mini_footer">Comprar</div>
+                        <span> PERFUMES <br> 44.700</span>
+                        <button>Comprar</button>
                     </div>
-                </section>
-                <section class="grilla grid-item" id="ropa_section">
+                <!--<div class="card">
+                        <div class="card_div_img">
+                            <img src="./assets/img/citycar.jpg" alt="City car logo">
+                        </div>
+                        <span>Model: City Car</span>
+                        <button>Ver más</button>
+                    </div>-->
+                </section><!--
+                <section class="ropa_grilla grid-item" id="ropa_section">
                 <div class="card grid-item">
                     <div class="una_imagen">
                         <img src="./assets/img/ropa_img.jpg" alt="">
@@ -96,7 +96,7 @@
                 </div>
 
                 </section>
-                <section class="grilla grid-item" id="accesorios_section">
+                <section class="accesorios_grilla grid-item" id="accesorios_section">
                 <div class="card grid-item">
                     <div class="una_imagen">
                         <img src="./assets/img/accesorios_img.jpg" alt="">
@@ -123,7 +123,7 @@
                 </div>
 
                 </section>
-                <section class="grilla grid-item" id="zapatos_section">
+                <section class="zapatos_grilla grid-item" id="zapatos_section">
                 <div class="card grid-item">
                     <div class="una_imagen">
                         <img src="./assets/img/zapatos_img.jpg" alt="">
@@ -149,13 +149,12 @@
                     <div class="mini_footer">Comprar</div>
                 </div>
 
-                </section>
-            </section>
+                </section>-->
         </main>
-    
+    <!--
         <footer>
             <h3>@miecommerce</h3>
-        </footer>
+        </footer>-->
     </div>
 </body>
 </html>

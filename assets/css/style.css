@@ -6,32 +6,62 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
 p {
     font-style: italic;
     padding-left: 5px;
 }
 
-header {
-    grid-area: header;
-    background-color: aquamarine;
-    color: black;
-    text-align: center;
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 10fr 1fr;
+}
+.nav_section{
+    grid-area: nav;
+    background-color: blue;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    color: white;
+}
+
+.mini_head{
+    display: flex;
+    align-items: center;
     padding: 10px;
 }
+.mini_head > h1 {
+    padding-left: 10px;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items {
+    display: flex;
+}
+
 
 main {
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
 }
-
+/*
 .aside-bar {
     background-color: antiquewhite;
     min-height: 40vh;
     padding: 25px;
-}
-.aside-bar .logo img {
-    height: 100px;
-    width: 100px;
 }
 .aside-bar .items {
     display: flex;
@@ -40,39 +70,149 @@ main {
 .aside-bar ul {
     list-style: none;
     padding-left: 0px;
-}
+}*/
 
-.grilla {
+.perfume_grilla {
     background-color: rgb(208, 206, 206);
-}
-
-.grilla .card .grid-items{
     display: flex;
 }
 
-.grilla .card {
+.perfume_grilla .card .grid-items{
+    display: flex;
+}
+
+.perfume_grilla .card {
     text-align: center;
     padding: 20px;
     width: 200px;
 }
 
-.grilla .card img {
+.main_section > .perfume_grilla > .card img {
     width: 150px;
     height: 150px;
     padding-top: 20px;
+    
+    filter: grayscale(1);
+    transition: all 2s;
+    animation: blurimage_start 2s;
 }
 
-.grilla .card .una_imagen{
+.main_section > .perfume_grilla > .card > .una_imagen{
     background-color: white;
     padding: 0%;
+    overflow: hidden;
 }
 
-.grilla .card .mini_footer{
+.main_section .perfume_grilla .card img:hover{
+    filter: grayscale(0);
+    transform: scale(1.5);
+}
+
+.perfume_grilla .card .mini_footer{
     background-color: aqua;
     padding: 0;
     height: 25px;
 }
 
+/*
+.ropa_grilla {
+    background-color: rgb(208, 206, 206);
+    display: flex;
+}
+
+.ropa_grilla .card .grid-items{
+    display: flex;
+}
+
+.ropa_grilla .card {
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+}
+
+.ropa_grilla .card img {
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.ropa_grilla .card .una_imagen{
+    background-color: white;
+    padding: 0%;
+}
+
+.ropa_grilla .card .mini_footer{
+    background-color: aqua;
+    padding: 0;
+    height: 25px;
+}
+
+.accesorios_grilla {
+    background-color: rgb(208, 206, 206);
+    display: flex;
+}
+
+.accesorios_grilla .card .grid-items{
+    display: flex;
+}
+
+.accesorios_grilla .card {
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+}
+
+.accesorios_grilla .card img {
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.accesorios_grilla .card .una_imagen{
+    background-color: white;
+    padding: 0%;
+}
+
+.accesorios_grilla .card .mini_footer{
+    background-color: aqua;
+    padding: 0;
+    height: 25px;
+}
+
+.zapatos_grilla {
+    background-color: rgb(208, 206, 206);
+    display: flex;
+}
+
+.zapatos_grilla .card .grid-items{
+    display: flex;
+}
+
+.zapatos_grilla .card {
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+}
+
+.zapatos_grilla .card img {
+    width: 150px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.zapatos_grilla .card .una_imagen{
+    background-color: white;
+    padding: 0%;
+}
+
+.zapatos_grilla .card .mini_footer{
+    background-color: aqua;
+    padding: 0;
+    height: 25px;
+}
+
+
+/*
 .grid-container main {
     display: grid;
     grid-template-columns: auto 80%;
@@ -84,19 +224,21 @@ main {
     grid-template-columns: auto auto auto ;
     gap: 20px;
 }
-
-.grid-container {
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "footer footer";
-    gap: 10px;
-}
+/*
 
 footer {
     grid-area: footer;
     text-align: center;
     background-color: aquamarine;
     color: black;
-    padding: 10px;}
+    padding: 10px;}*/
+
+
+@keyframes blurimage_start{
+    from{
+        filter: blur(3px);
+    }
+    to{
+        filter: blur(10px);
+    }
+}
