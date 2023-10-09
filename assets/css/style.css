@@ -275,27 +275,22 @@ main {
 }
 
 
-/*
-.grid-container main {
-    display: grid;
-    grid-template-columns: auto 80%;
-    gap: 10px;
-}
 
-.grid-container .grilla {
-    display: grid;
-    grid-template-columns: auto auto auto ;
-    gap: 20px;
-}
-/*
 
-footer {
+
+
+.footer_section{
     grid-area: footer;
-    text-align: center;
-    background-color: aquamarine;
+    background-color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
     color: black;
-    padding: 10px;}*/
-
+}
+.footer_section > .logo{
+    width: 25px;
+}
 
 @keyframes blurimage_start{
     from{
@@ -312,4 +307,42 @@ footer {
     to{
         width: 180px;
     }   
+}
+
+@media (min-width: 576px){
+    .nav_section{
+        background-color: brown;
+    }
+    .container{
+        grid-template-areas:
+            "nav main"
+            "nav main"
+            "footer"
+        ;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 60px 1fr 60px;
+    }
+    .main_section{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .nav_section{
+        flex-direction: column;
+        justify-content: start;
+        gap: 35px;
+        padding: 15px;
+    }
+    .nav_section > ul{
+        list-style: none;
+        display: block;
+    }
+    .nav_section >  .menu{
+        display: none;
+    }
+    .nav_section > .mini_head{
+        display: none;
+    }
+    .nav_section > .otro_head{
+        display: block;
+    }
 }
