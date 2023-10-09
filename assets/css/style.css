@@ -24,7 +24,7 @@ p {
 }
 .nav_section{
     grid-area: nav;
-    background-color: blue;
+    background-color: aquamarine;
     display: flex ;
     align-items: center;
     justify-content: space-between;
@@ -79,6 +79,7 @@ main {
 
 .perfume_grilla .card .grid-items{
     display: flex;
+    flex-direction: column;
 }
 
 .perfume_grilla .card {
@@ -107,14 +108,22 @@ main {
     filter: grayscale(0);
     transform: scale(1.5);
 }
-
-.perfume_grilla .card .mini_footer{
-    background-color: aqua;
-    padding: 0;
-    height: 25px;
+.main_section .perfume_grilla .card button{
+    width: 90px;
+    height: 35px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    animation: cambiar_ancho 2s linear infinite;
 }
 
-/*
+.main_section .perfume_grilla .card button:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
+
 .ropa_grilla {
     background-color: rgb(208, 206, 206);
     display: flex;
@@ -129,22 +138,39 @@ main {
     padding: 20px;
     width: 200px;
 }
-
-.ropa_grilla .card img {
+.main_section > .ropa_grilla > .card img {
     width: 150px;
     height: 150px;
     padding-top: 20px;
+    
+    filter: grayscale(1);
+    transition: all 2s;
+    animation: blurimage_start 2s;
 }
 
-.ropa_grilla .card .una_imagen{
+.main_section > .ropa_grilla > .card > .una_imagen{
     background-color: white;
     padding: 0%;
+    overflow: hidden;
 }
 
-.ropa_grilla .card .mini_footer{
-    background-color: aqua;
-    padding: 0;
-    height: 25px;
+.main_section .ropa_grilla .card img:hover{
+    filter: grayscale(0);
+    transform: scale(1.5);
+}
+.main_section .ropa_grilla .card button{
+    width: 90px;
+    height: 35px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    animation: cambiar_ancho 2s linear infinite;
+}
+
+.main_section .ropa_grilla .card button:hover{
+    cursor: pointer;
+    animation-play-state: paused;
 }
 
 .accesorios_grilla {
@@ -162,22 +188,41 @@ main {
     width: 200px;
 }
 
-.accesorios_grilla .card img {
+.main_section > .accesorios_grilla > .card img {
     width: 150px;
     height: 150px;
     padding-top: 20px;
+    
+    filter: grayscale(1);
+    transition: all 2s;
+    animation: blurimage_start 2s;
 }
 
-.accesorios_grilla .card .una_imagen{
+.main_section > .accesorios_grilla > .card > .una_imagen{
     background-color: white;
     padding: 0%;
+    overflow: hidden;
 }
 
-.accesorios_grilla .card .mini_footer{
-    background-color: aqua;
-    padding: 0;
-    height: 25px;
+.main_section .accesorios_grilla .card img:hover{
+    filter: grayscale(0);
+    transform: scale(1.5);
 }
+.main_section .accesorios_grilla .card button{
+    width: 90px;
+    height: 35px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    animation: cambiar_ancho 2s linear infinite;
+}
+
+.main_section .accesorios_grilla .card button:hover{
+    cursor: pointer;
+    animation-play-state: paused;
+}
+
 
 .zapatos_grilla {
     background-color: rgb(208, 206, 206);
@@ -194,21 +239,39 @@ main {
     width: 200px;
 }
 
-.zapatos_grilla .card img {
+.main_section > .zapatos_grilla > .card img {
     width: 150px;
     height: 150px;
     padding-top: 20px;
+    
+    filter: grayscale(1);
+    transition: all 2s;
+    animation: blurimage_start 2s;
 }
 
-.zapatos_grilla .card .una_imagen{
+.main_section > .zapatos_grilla > .card > .una_imagen{
     background-color: white;
     padding: 0%;
+    overflow: hidden;
 }
 
-.zapatos_grilla .card .mini_footer{
-    background-color: aqua;
-    padding: 0;
-    height: 25px;
+.main_section .zapatos_grilla .card img:hover{
+    filter: grayscale(0);
+    transform: scale(1.5);
+}
+.main_section .zapatos_grilla .card button{
+    width: 90px;
+    height: 35px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    animation: cambiar_ancho 2s linear infinite;
+}
+
+.main_section .zapatos_grilla .card button:hover{
+    cursor: pointer;
+    animation-play-state: paused;
 }
 
 
@@ -241,4 +304,12 @@ footer {
     to{
         filter: blur(10px);
     }
+}
+@keyframes cambiar_ancho {
+    from{
+        width: 90px;
+    }
+    to{
+        width: 180px;
+    }   
 }
